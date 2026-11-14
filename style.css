@@ -38,3 +38,28 @@ button:hover{box-shadow:0 0 18px rgba(242,201,138,.6)}
 .hide{position:absolute;left:-9999px}
 footer{padding:14px;border-top:1px solid var(--line);background:var(--bar);color:var(--soft);font-size:.95rem}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+.gallery img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: zoom-in;
+}
+#lightbox {
+display: none;
+position: fixed;
+inset: 0;
+background: rgba(0, 0, 0, 0.9);
+justify-content: center;
+align-items: center;
+cursor: zoom-out;
+z-index: 1000;
+}
+#lightbox img {
+max-width: 95%;
+max-height: 95%;
+}

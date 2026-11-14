@@ -67,3 +67,11 @@ height: auto;
 max-width: 95vw;
 max-height: 95vh;
 }
+.centered {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+}
+
+

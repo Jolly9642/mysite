@@ -40,26 +40,30 @@ footer{padding:14px;border-top:1px solid var(--line);background:var(--bar);color
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 12px;
+  width: 100%;
 }
 .gallery img {
   width: 100%;
-  height: 200px;
+  height: 150px;
   object-fit: cover;
+  border-radius: 8px;
   cursor: zoom-in;
 }
 #lightbox {
 display: none;
 position: fixed;
 inset: 0;
-background: rgba(0, 0, 0, 0.9);
+background: rgba(0, 0, 0, 0.92);
 justify-content: center;
 align-items: center;
 cursor: zoom-out;
 z-index: 1000;
 }
 #lightbox img {
-max-width: 95%;
-max-height: 95%;
+width: auto;
+height: auto;
+max-width: 95vw;
+max-height: 95vh;
 }

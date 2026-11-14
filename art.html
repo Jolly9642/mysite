@@ -28,15 +28,32 @@
             <img src="images/itsbehindme.jpg" alt="your past is always behind you">
             <img src="images/coffeeshop.jpg" alt="i made and worked on this primarily at the 806">
             <img src="images/infinity.jpg" alt="i tried to work on this when i was feeling strong emotions whether it be happy, sad, or grief">
-            <img src="images/gettothepoint.jpg" alt="i didn't like this piece when i started but i didn't give up and i think it turned out pretty good">
+            <img src="images/gettothepoint.jpg" alt="i didn't like this piece at first but i kepy working on it and now i think it turned out pretty good.">
         </div>
     </section>
-<div id="lightbox" onclick="this.style.display='none'">
-  <img id="lightbox-img" src="" alt="">
-</div>
+
 
   </main>
 
 </div>
+ <div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const box = document.getElementById('lightbox');
+    const big = document.getElementById('lightbox-img');
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        big.src = img.src;
+        big.alt = img.alt;
+        box.style.display = 'flex';
+      });
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') box.style.display = 'none';
+    });
+  </script>
+
 </body>
 </html>

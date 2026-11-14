@@ -25,7 +25,10 @@
 
     <section>
 
-        <img src="jolly.jpg" alt="me">
+       <div class="gallery">
+            <img src="jolly.jpg" alt="me" class="centered">
+        </div>
+
         <h1>Jolly</h1>
         <p>In this current phase of life I am trying to grow my creativity. </p>
 
@@ -47,5 +50,25 @@
   </main>
 
 </div>
+
+<div id="lightbox" onclick="this.style.display='none'">
+    <img id="lightbox-img" src="" alt="">
+  </div>
+
+  <script>
+    const box = document.getElementById('lightbox');
+    const big = document.getElementById('lightbox-img');
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        big.src = img.src;
+        big.alt = img.alt;
+        box.style.display = 'flex';
+      });
+    });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') box.style.display = 'none';
+    });
+  </script>
+
 </body>
 </html>

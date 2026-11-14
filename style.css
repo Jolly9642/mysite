@@ -74,9 +74,11 @@ max-height: 95vh;
   height: auto;
 }
 
-.profile-pic {
-  width: 100%;
-  max-width: 320px;   /* change to whatever size you like */
-  height: auto;       /* shows the whole picture, no cropping */
+img.profile-pic {
+  display: block;
+  margin: 0 auto;
+  width: 250px;
+  max-width: 100%;
+  height: auto;
   border-radius: 12px;
 }
